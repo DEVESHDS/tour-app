@@ -1,33 +1,34 @@
-import Image from 'next/image'
+import { HighLight } from "@/types/apiTypes";
+import styles from "../../styles/homePage.module.css"
+import React, { FunctionComponent } from "react";
+import HighLightCard from "./components/highLightCard";
 
-import React, { FunctionComponent } from "react"
-
-interface HighLightProps {
-    name:string,
-    description:string,
-    image:string
+interface HighLightCompProps {
+  highlightsArr: Array<HighLight>;
 }
 
-const HighLight:FunctionComponent<HighLightProps>=({name,description,image})=>{
-    return (
-        <div className="">
-            <Image
-              src={`${image}`}
-              alt="highlight-bg"
-              className=""
-              width={100}
-              height={50}
-              priority
-            />
-            <p>{name}</p>
-            <p>{description}</p>
-            <div>
-                <div>
-                    <Image src={"/assets/icon/arrow_forward.svg"} alt='icon' />
-                </div>
-            </div>
-        </div>
-    )
-}
+const HighLight: FunctionComponent<HighLightCompProps> = ({
+  highlightsArr,
+}) => {
+  return (
+    <div className="px-4 sm:px-36 bg-white py-10">
+      <h3 className="mb-4">Highlights</h3>
+      <div className={`flex gap-x-4 ${styles.scrollbar_hide} overflow-x-auto py-2 px-2 -mx-2`}>
+        {highlightsArr &&
+          highlightsArr.length > 0 &&
+          highlightsArr.map((hl) => {
+            return (
+              <HighLightCard
+                key={hl.title}
+                name={hl.title}
+                image={hl.image}
+                description={hl.description}
+              />
+            );
+          })}
+      </div>
+    </div>
+  );
+};
 
-export default HighLight
+export default HighLight;

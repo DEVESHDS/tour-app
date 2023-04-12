@@ -1,0 +1,36 @@
+.welcome_msg {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 6.44%, #FFFFFF 95.08%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+text-align: center;
+font-weight: 700;
+}
+
+.highlight_box_card_shadow {
+    box-shadow: 0px 0px 16px rgba(0, 128, 128, 0.16);
+}
+
+
+/* This is used for controlling description text lines as UI might break if description for some highlight is much longer than expected */
+.general_font_class {
+    text-overflow: ellipsis;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+  
+  }
+
+  .scrollbar_hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar_hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
