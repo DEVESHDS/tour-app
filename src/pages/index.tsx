@@ -10,7 +10,7 @@ import alohaBlack from "../../public/assets/images/aloha_black.png";
 import menuIcon from "../../public/assets/icons/menu.png"
 import closeIcon from "../../public/assets/icons/close.png"
 import { FunctionComponent, useEffect, useState } from "react";
-import CommonHeaderComponent from "@/components/headers/components/commonHeader";
+import CommonHeaderComponent from "@/components/headers";
 // import { Inter } from 'next/font/google'
 
 // const inter = Inter({ subsets: ['IBM Plex Mono'] })
