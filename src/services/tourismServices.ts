@@ -9,6 +9,6 @@ export const fetchCategories = () => {
   return api.get(ApiConfig.categories);
 };
 
-export const fetchActivities = () => {
-  return api.get(ApiConfig.activities);
+export const fetchActivities = (activityType: string) => {
+  return api.get(ApiConfig.activities.replace("%d", activityType));
 };

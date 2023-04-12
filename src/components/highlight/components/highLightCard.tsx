@@ -1,7 +1,8 @@
 import Image from "next/image";
 import styles from "../../../styles/homePage.module.css";
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, useCallback } from "react";
 import forwardIcon from "../../../../public/assets/icons/arrow_forward.svg";
+import { useRouter } from "next/router";
 
 interface HighLightProps {
   name: string;
@@ -14,9 +15,14 @@ const HighLightCard: FunctionComponent<HighLightProps> = ({
   description,
   image,
 }) => {
+    const router=useRouter();
+    const handleCardClick=useCallback(()=>{
+        router.push(`/activities/${name}`);
+    },[])
   return (
     <div
       className={`${styles.highlight_box_card_shadow} rounded-lg flex flex-col flex-1 min-w-[260px] sm:min-w-[200px] relative pb-12 cursor-pointer `}
+      onClick={handleCardClick}
     >
       <Image
         src={`${image}`}

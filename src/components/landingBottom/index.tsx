@@ -4,6 +4,7 @@ import GuideCard from "./components/guideCard";
 import guideImage from "../../../public/assets/images/guide_img.webp";
 import { Categories } from "@/types/apiTypes";
 import CategoryCard from "./components/categoryCard";
+import noHighlights from "../../../public/assets/images/no_category.svg"
 
 interface BottomSectionProps {
   categoryArr: Array<Categories>;
@@ -22,6 +23,7 @@ const BottomSection: FunctionComponent<BottomSectionProps> = ({
             categoryArr.map((ct) => {
               return <CategoryCard key={ct.name} name={ct.name} />;
             })}
+             {categoryArr && categoryArr.length===0 && <Image src={noHighlights} className="w-72 h-72 mx-auto" alt="bg-img" />}
         </div>
       </div>
       <div className="flex flex-col ">

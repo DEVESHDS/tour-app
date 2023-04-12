@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const FooterSection: FunctionComponent<{}> = () => {
   return (
-    <div className="bg-dark w-full sticky bottom-0 px-4 sm:px-36 py-4">
+    <div className="bg-dark w-full  bottom-0 px-4 sm:px-36 py-4">
       <Image
         src="/assets/images/aloha_white.png"
         alt="icon"

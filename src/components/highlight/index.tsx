@@ -2,6 +2,8 @@ import { HighLight } from "@/types/apiTypes";
 import styles from "../../styles/homePage.module.css"
 import React, { FunctionComponent } from "react";
 import HighLightCard from "./components/highLightCard";
+import noHighlights from "../../../public/assets/images/no_highlight.svg"
+import Image from "next/image";
 
 interface HighLightCompProps {
   highlightsArr: Array<HighLight>;
@@ -26,6 +28,7 @@ const HighLight: FunctionComponent<HighLightCompProps> = ({
               />
             );
           })}
+          {highlightsArr && highlightsArr.length===0 && <Image src={noHighlights} className="w-72 h-72 mx-auto" alt="bg-img" />}
       </div>
     </div>
   );
