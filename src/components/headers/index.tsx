@@ -26,7 +26,7 @@ const CommonHeaderComponent: FunctionComponent<{
       </div>
       <button
         className={`bg-kimo-green text-white ${
-          isNav ? "mr-auto" : "ml-auto"
+          isNav ? "mr-auto mt-4" : "ml-auto "
         } px-6 py-4 rounded-lg`}
       >
         Book a trip
