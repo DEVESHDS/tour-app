@@ -1,25 +1,31 @@
-import { Activities } from "@/types/apiTypes";
+import { Activities, HighLight } from "@/types/apiTypes";
 import Image from "next/image";
 import styles from "../../styles/homePage.module.css";
 import { FunctionComponent } from "react";
-import { fetchActivities } from "@/services/tourismServices";
+import { fetchActivities, fetchHighlights } from "@/services/tourismServices";
 import noActivity from "../../../public/assets/images/no_activity.png";
 import arrow_back from "../../../public/assets/icons/arrow_forward.svg";
 import alohaBlack from "../../public/assets/images/aloha_black.png";
 import Link from "next/link";
 import FooterSection from "@/components/footer";
+import HeaderBar from "@/components/headers";
+import Banner from "@/components/banner";
 
-const ActivityDetails: FunctionComponent<Activities> = ({
-  activities,
-  description,
-  name,
-  image,
+interface ActivityDetailProps {
+  act:Activities,
+  highlights:Array<HighLight>
+}
+
+const ActivityDetails: FunctionComponent<ActivityDetailProps> = ({
+  act,highlights
 }) => {
+  const {name,description,image,activities}=act;
   return (
     <div className="relative min-h-screen overflow-y-scroll">
+      <HeaderBar highlightsArr={highlights} />
       {name ? (
         <div className="flex flex-col min-h-screen">
-          <div className="relative min-h-[460px] flex items-center justify-center text-center px-4 sm:px-36">
+          {/* <div className="relative min-h-[460px] flex items-center justify-center text-center px-4 sm:px-36">
             <Image
               src={image}
               alt="icon"
@@ -30,15 +36,16 @@ const ActivityDetails: FunctionComponent<Activities> = ({
             <p className={`${styles.welcome_msg} text-3xl break-words`}>
               {name}
             </p>
-          </div>
-          <div className="px-4 sm:px-36">
+          </div> */}
+          <Banner topMsg={name} bottomMsg="" url={image} />
+          <div className="px-4 sm:px-36 mt-4">
             <div className="mb-4">
-              <p className="text-kimo-green text-2xl font-bold">Description:</p>
+              <p className="text-kimo-green text-2xl font-bold mb-2">Description:</p>
               <p>{description}</p>
             </div>
             {activities && activities.length > 0 && (
               <div>
-                <p className="text-kimo-green text-2xl font-bold mb-2">Activities</p>
+                <p className="text-kimo-green text-2xl font-bold mb-2 mt-4">Activities</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 mb-4">
                 {activities.map((act) => {
                   return (
@@ -67,27 +74,54 @@ const ActivityDetails: FunctionComponent<Activities> = ({
 
 export default ActivityDetails;
 
-export async function getServerSideProps({
-  resolvedUrl,
-}: {
+
+
+export async function getServerSideProps({resolvedUrl}:{
   resolvedUrl: string;
 }) {
+  let high:Array<HighLight>=[];
+  let act:Activities={name:"",description:"",image:"",activities:[]};
   try {
-    console.log("req res and url is ", resolvedUrl);
+    
     let pathArr = resolvedUrl.split("/");
     if (pathArr && pathArr.length < 3) {
       throw new Error("wrong parameter");
     }
-    console.log("param is ", pathArr);
-    const results = await fetchActivities(pathArr[2]);
-    const activityData: Activities = { ...results.data };
-    console.log("results are ", results.data);
+    const results = await Promise.allSettled([
+      fetchHighlights(),
+      fetchActivities(pathArr[2])
+    ]);
+    const isFulfilled = <T,>(
+      p: PromiseSettledResult<T>
+    ): p is PromiseFulfilledResult<T> => p.status === "fulfilled";
+    
+
+    results.filter(isFulfilled).forEach((p) =>{ 
+      if(p.value.request.path==="/v1/highlights"){
+        high=[...p.value.data as Array<HighLight>]
+      }else{
+        act={...p.value.data as Activities}
+      }
+
+      
+      
+    });
     return {
-      props: { ...results.data },
-    };
+      props: {
+        highlights: [...high],
+        act:{...act}
+      },
+    }
+
+    
   } catch (err) {
     return {
-      props: {},
+      props: {
+        highlights: [],
+        act:{},
+      },
     };
   }
+
+  
 }

@@ -20,13 +20,14 @@ module.exports = {
         lightblack: "rgba(0,0,0,0.4)",
       },
       fontSize: {
-        large: ["140px", "132px"],
+        large: ["140px", "160px"],
         semilarge: ["64px", "60px"],
       },
       width: {
         74: "74px",
       },
       zIndex: {
+        1: "1",
         400: "400",
         500: "500",
       },

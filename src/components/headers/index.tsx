@@ -1,5 +1,4 @@
 import { HighLight } from "@/types/apiTypes";
-import Link from "next/link";
 import alohaBlack from "../../../public/assets/images/aloha_black.png";
 import menuIcon from "../../../public/assets/icons/menu.png";
 import closeIcon from "../../../public/assets/icons/close.png";
@@ -20,12 +19,12 @@ const HeaderBar: FunctionComponent<{
     }
   }, [openNav]);
   return (
-    <div className="sm:px-36 sm:absolute sm:top-4 z-500 w-full">
-      <div className="hidden sm:flex bg-white rounded-lg w-full flex items-center py-3 px-4">
+    <div className="md:px-36 md:absolute md:top-4 z-500 w-full">
+      <div className="hidden md:flex bg-white rounded-lg w-full flex items-center py-3 px-4">
         <Image src={alohaBlack} alt="title" className="w-24 h-9 mr-4" />
         <CommonHeaderComponent isNav={false} highlightsArr={highlightsArr} />
       </div>
-      <div className="flex sm:hidden justify-between items-center absolute z-[100] bg-white items-center w-full left-0 px-4 py-2">
+      <div className="flex md:hidden justify-between items-center absolute z-[100] bg-white items-center w-full left-0 px-4 py-2">
         <Image src={alohaBlack} alt="title" className="w-24 h-9" />
         <Image
           src={menuIcon}
