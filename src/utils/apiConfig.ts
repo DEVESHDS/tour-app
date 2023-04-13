@@ -1,4 +1,4 @@
-const baseAPI = "https://web-dev.dev.kimo.ai"; //this can be made configurable using tools like env cmd for staging and production purpose
+const baseAPI = process.env.NEXT_PUBLIC_BASE_URL;
 
 const ApiConfig = {
   highlights: baseAPI + "/v1/highlights",
