@@ -1,23 +1,37 @@
 Project is deployed on the following link(https://tour-app-bay.vercel.app/)
 
-## Screenshots of different web pages
+This project is done as a part of assignment for Kimo.ai.The project is created using NextJS,Typescript and ReactJS.All the edge cases and error cases are handled and a feasible UI for them will be rendered.Code is highly modular.Small modular components are created to be reused as per the need.
 
 ## Error handle UI
 
-![alt tag](https://drive.google.com/file/d/1tQOeE__Oj2W2Rnwp3e0brmQ4Dl0uo_4-/view?usp=sharing)
-![alt tag](https://drive.google.com/file/d/1OWYL2WjKYfZIO7uv4Ya4PEG-td4ahunS/view?usp=sharing)
+ <img src="https://user-images.githubusercontent.com/45074021/231753937-039cd0ec-6cf3-48e7-a372-14e45b489c8c.png"  />
+ 
+
 
 ## Web UI
+ <img src="https://user-images.githubusercontent.com/45074021/231752977-9c16d2c2-4021-491e-a8f3-9e30d81cffd8.png"  />
+ 
+ -----------------------------------
+ 
+ ![image (3)](https://user-images.githubusercontent.com/45074021/231794676-eb8d01e3-c3d7-4eed-9c15-48ae3fe2181c.png)
 
-[logo](https://drive.google.com/file/d/1LW_DgP0IYNDSwq6YtqoicOPVIHx9BjYe/view?usp=sharing)
-[logo](https://drive.google.com/file/d/1M8teLz-NWeCpZNhwsXz4x6bZJwhP4JOd/view?usp=sharing)
+ -----------------------------------
+ 
+ <img src="https://user-images.githubusercontent.com/45074021/231793284-99a8533c-a49b-452b-b785-aa06945d3f1f.png"  />
+ 
+ -----------------------------------
+
+
 
 ## Mobile UI
 
-[logo](https://drive.google.com/file/d/1-FGSj_1ZgH9mMws5fREA2AuIhwt7bKP2/view?usp=sharing)
-[logo](https://drive.google.com/file/d/1ycd0QoSAiYE-GBtoR57f42NaTKW-e-8X/view?usp=sharing)
+<img src="https://user-images.githubusercontent.com/45074021/231757496-94def033-843d-416a-b3ba-554f01f9d09d.png" height="600"  />
+
+
+
 
 ## Getting Started
+
 
 First, run the development server:
 
