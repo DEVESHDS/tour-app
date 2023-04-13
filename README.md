@@ -4,8 +4,8 @@ Project is deployed on the following link(https://tour-app-bay.vercel.app/)
 
 ## Error handle UI
 
-[logo](https://drive.google.com/file/d/1tQOeE__Oj2W2Rnwp3e0brmQ4Dl0uo_4-/view?usp=sharing)
-[logo](https://drive.google.com/file/d/1OWYL2WjKYfZIO7uv4Ya4PEG-td4ahunS/view?usp=sharing)
+![alt tag](https://drive.google.com/file/d/1tQOeE__Oj2W2Rnwp3e0brmQ4Dl0uo_4-/view?usp=sharing)
+![alt tag](https://drive.google.com/file/d/1OWYL2WjKYfZIO7uv4Ya4PEG-td4ahunS/view?usp=sharing)
 
 ## Web UI
 
