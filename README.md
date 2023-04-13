@@ -1,4 +1,21 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Project is deployed on the following link(https://tour-app-bay.vercel.app/)
+
+## Screenshots of different web pages
+
+## Error handle UI
+
+[logo](https://drive.google.com/file/d/1tQOeE__Oj2W2Rnwp3e0brmQ4Dl0uo_4-/view?usp=sharing)
+[logo](https://drive.google.com/file/d/1OWYL2WjKYfZIO7uv4Ya4PEG-td4ahunS/view?usp=sharing)
+
+## Web UI
+
+[logo](https://drive.google.com/file/d/1LW_DgP0IYNDSwq6YtqoicOPVIHx9BjYe/view?usp=sharing)
+[logo](https://drive.google.com/file/d/1M8teLz-NWeCpZNhwsXz4x6bZJwhP4JOd/view?usp=sharing)
+
+## Mobile UI
+
+[logo](https://drive.google.com/file/d/1-FGSj_1ZgH9mMws5fREA2AuIhwt7bKP2/view?usp=sharing)
+[logo](https://drive.google.com/file/d/1ycd0QoSAiYE-GBtoR57f42NaTKW-e-8X/view?usp=sharing)
 
 ## Getting Started
 
@@ -21,18 +38,3 @@ You can start editing the page by modifying `pages/index.tsx`. The page auto-upd
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
