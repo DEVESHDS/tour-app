@@ -54,7 +54,7 @@ export async function getServerSideProps() {
       }
       
     });
-    console.log("api working fine");
+  
     return {
       props: {
         highlights: [...high],
@@ -64,7 +64,7 @@ export async function getServerSideProps() {
 
     
   } catch (err) {
-    console.log("error logged at server is ",err);
+   
     return {
       props: {
         highlights: [],
