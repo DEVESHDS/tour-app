@@ -19,9 +19,9 @@ const GuideCard: FunctionComponent<GuideCardProps> = ({
           <p className="text-2xl text-dard font-bold">{name}</p>
           <p className="text-base text-dark font-normal">Guide since {joiningYear}</p>
         </div>
-        <button className="text-kimo-green text-base font-bold rounded-lg border border-kimo-green px-2 py-1 sm:px-6 py-2 w-fit">Contact</button>
+        <button className="text-kimo-green hover:text-white hover:bg-kimo-green text-base font-bold rounded-lg border border-kimo-green px-2 py-1 sm:px-6 py-2 w-fit">Contact</button>
       </div>
-      <div>
+      <div >
         <Image src={image} alt="icon" className="w-74 h-74 sm:w-32 sm:h-32  rounded-full" />
       </div>
     </div>

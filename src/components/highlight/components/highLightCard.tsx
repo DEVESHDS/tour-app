@@ -21,7 +21,7 @@ const HighLightCard: FunctionComponent<HighLightProps> = ({
     },[])
   return (
     <div
-      className={`${styles.highlight_box_card_shadow} rounded-lg flex flex-col flex-1 min-w-[260px] sm:min-w-[200px] relative pb-12 cursor-pointer `}
+      className={`${styles.highlight_box_card_shadow} rounded-lg flex flex-col flex-1 min-w-[260px] sm:min-w-[200px] relative pb-12  `}
       onClick={handleCardClick}
     >
       <Image
@@ -36,7 +36,7 @@ const HighLightCard: FunctionComponent<HighLightProps> = ({
         <p className="text-kimo-green font-bold text-2xl my-2">{name}</p>
         <p className={`${styles.general_font_class} text-base text-dark font-normal`}>{description}</p>
 
-        <div className="w-10 h-10 rounded-full bg-kimo-lightgreen flex items-center justify-center ml-auto absolute bottom-2 right-2">
+        <div className="w-10 h-10 rounded-full bg-kimo-lightgreen flex items-center justify-center ml-auto absolute bottom-2 right-2 cursor-pointer">
           <Image src={forwardIcon} alt="icon" />
         </div>
       </div>

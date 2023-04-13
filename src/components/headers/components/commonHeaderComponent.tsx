@@ -25,9 +25,9 @@ const CommonHeaderComponent: FunctionComponent<{
           })}
       </div>
       <button
-        className={`bg-kimo-green text-white ${
+        className={`bg-kimo-green text-white border ${
           isNav ? "mr-auto mt-4" : "ml-auto "
-        } px-6 py-4 rounded-lg`}
+        } px-6 py-4 rounded-lg hover:bg-white hover:text-kimo-green border-kimo-green hover:border`}
       >
         Book a trip
       </button>

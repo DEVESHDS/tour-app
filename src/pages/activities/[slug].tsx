@@ -37,7 +37,7 @@ const ActivityDetails: FunctionComponent<ActivityDetailProps> = ({
                   return (
                     <div
                       key={act.name}
-                      className="bg-white rounded-lg flex justify-between items-center py-6 px-6 cursor-pointer"
+                      className="bg-white rounded-lg flex justify-between items-center py-6 px-6 cursor-pointer hover:bg-kimo-lightgreen"
                     >
                       <p className="text-base font-normal text-dark">
                         {act.name}
