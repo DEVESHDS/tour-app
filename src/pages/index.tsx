@@ -3,7 +3,7 @@ import HighLightComponent from "@/components/highlight";
 import BottomSection from "@/components/landingBottom";
 import { fetchCategories, fetchHighlights } from "@/services/tourismServices";
 import { Categories, HighLight } from "@/types/apiTypes";
-import { FunctionComponent, useEffect, useState } from "react";
+import { FunctionComponent,  } from "react";
 import HeaderBar from "@/components/headers";
 
 import Banner from "@/components/banner";
@@ -44,10 +44,8 @@ export async function getServerSideProps() {
     const isFulfilled = <T,>(
       p: PromiseSettledResult<T>
     ): p is PromiseFulfilledResult<T> => p.status === "fulfilled";
-    const isRejected = <T,>(
-      p: PromiseSettledResult<T>
-    ): p is PromiseRejectedResult => p.status === "rejected";
-
+    
+    
     results.filter(isFulfilled).forEach((p) =>{ 
       if(p.value.request.path==="/v1/highlights"){
         high=[...p.value.data as Array<HighLight>]
@@ -56,6 +54,7 @@ export async function getServerSideProps() {
       }
       
     });
+    console.log("api working fine");
     return {
       props: {
         highlights: [...high],
@@ -65,6 +64,7 @@ export async function getServerSideProps() {
 
     
   } catch (err) {
+    console.log("error logged at server is ",err);
     return {
       props: {
         highlights: [],
