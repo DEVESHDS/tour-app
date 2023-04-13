@@ -1,7 +1,5 @@
-import { HighLight } from "@/types/apiTypes";
 import styles from "../../styles/homePage.module.css";
 import React, { FunctionComponent } from "react";
-import HeadersComponent from "../headers/components/commonHeaderComponent";
 import Image from "next/image";
 
 

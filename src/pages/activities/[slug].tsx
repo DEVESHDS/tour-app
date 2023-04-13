@@ -1,12 +1,10 @@
 import { Activities, HighLight } from "@/types/apiTypes";
 import Image from "next/image";
-import styles from "../../styles/homePage.module.css";
+
 import { FunctionComponent } from "react";
 import { fetchActivities, fetchHighlights } from "@/services/tourismServices";
 import noActivity from "../../../public/assets/images/no_activity.png";
-import arrow_back from "../../../public/assets/icons/arrow_forward.svg";
-import alohaBlack from "../../public/assets/images/aloha_black.png";
-import Link from "next/link";
+
 import FooterSection from "@/components/footer";
 import HeaderBar from "@/components/headers";
 import Banner from "@/components/banner";
@@ -25,18 +23,6 @@ const ActivityDetails: FunctionComponent<ActivityDetailProps> = ({
       <HeaderBar highlightsArr={highlights} />
       {name ? (
         <div className="flex flex-col min-h-screen">
-          {/* <div className="relative min-h-[460px] flex items-center justify-center text-center px-4 sm:px-36">
-            <Image
-              src={image}
-              alt="icon"
-              width={100}
-              height={100}
-              className="absolute w-full h-full -z-10 rounded-full w-72 h-72 sm:w-96 sm:h-96"
-            />
-            <p className={`${styles.welcome_msg} text-3xl break-words`}>
-              {name}
-            </p>
-          </div> */}
           <Banner topMsg={name} bottomMsg="" url={image} />
           <div className="px-4 sm:px-36 mt-4">
             <div className="mb-4">

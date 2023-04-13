@@ -1,6 +1,4 @@
-import WelcomeBanner from "@/components/banner";
 import FooterSection from "@/components/footer";
-import HeadersComponent from "@/components/headers/components/commonHeaderComponent";
 import HighLightComponent from "@/components/highlight";
 import BottomSection from "@/components/landingBottom";
 import { fetchCategories, fetchHighlights } from "@/services/tourismServices";
